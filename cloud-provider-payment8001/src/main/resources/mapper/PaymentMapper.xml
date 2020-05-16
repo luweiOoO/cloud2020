@@ -8,7 +8,7 @@
     <insert id="create" parameterType="com.atguigu.springcloud.entities.Payment" useGeneratedKeys="true" keyProperty="id">
         insert into payment(serial) values(#{serial})
     </insert>
-    <select id="getPaymentById" parameterType="int" resultMap="BaseResultMap">
+    <select id="getPaymentById" parameterType="integer" resultMap="BaseResultMap">
         select * from payment where id=#{id}
     </select>
 
