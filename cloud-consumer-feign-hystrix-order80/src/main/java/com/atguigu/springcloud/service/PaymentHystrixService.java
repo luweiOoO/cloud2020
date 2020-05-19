@@ -1,5 +1,7 @@
 package com.atguigu.springcloud.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,5 +16,4 @@ public interface PaymentHystrixService {
 
     @GetMapping("/payment/hystrix/timeout/{id}")
     public String PaymentInfo_Timeout(@PathVariable("id") Integer id);
-
 }
